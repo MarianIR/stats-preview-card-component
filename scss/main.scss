@@ -1,0 +1,124 @@
+@import "variables", "reset";
+
+body {
+  width: 100%;
+  background-color: $primaryColor1;
+}
+
+.main-section {
+  width: 90%;
+  max-width: 35rem;
+  margin: 2rem auto;
+  background-color: $primaryColor2;
+  border-radius: 1rem;
+  @media (min-width: 1032px) {
+    margin-top: 15rem;
+    max-width: 100rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .image {
+    background-color: $primaryColor3;
+    border-radius: 1rem 1rem 0 0;
+
+    .image-header {
+      width: 100%;
+      max-width: 35rem;
+      height: auto;
+      border-radius: 1rem 1rem 0 0;
+      opacity: 0.4;
+      @media (min-width: 1032px) {
+        border-radius: 0 1rem 1rem 0;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    @media (min-width: 1032px) {
+      width: 50%;
+      border-radius: 0 1rem 1rem 0;
+    }
+  }
+
+  .content-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    @media (min-width: 1032px) {
+      display: flex;
+      width: 50%;
+      align-items: flex-start;
+      margin: 2rem;
+    }
+    .main-header {
+      width: 90%;
+      margin: 2rem auto;
+      text-align: center;
+      font-size: 2.5rem;
+      color: $neutralColor1;
+      .strong {
+        color: $primaryColor3;
+      }
+      @media (min-width: 1032px) {
+        text-align: left;
+        width: 70%;
+      }
+    }
+    .paragraph {
+      width: 90%;
+      text-align: center;
+      color: $neutralColor3;
+      font-size: 1.6rem;
+      @media (min-width: 1032px) {
+        margin: 0 auto 2rem;
+        text-align: left;
+        width: 70%;
+      }
+    }
+
+    .statistics {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
+      @media (min-width: 1032px) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem auto;
+        width: 80%;
+      }
+      .companies,
+      .templates,
+      .queries {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem auto 1rem;
+        color: $neutralColor1;
+        .numbers {
+          font-weight: bold;
+          font-size: 2.5rem;
+          text-align: center;
+          margin: 0.5rem auto;
+        }
+        .type {
+          text-transform: uppercase;
+          color: $neutralColor3;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 5rem;
+  color: $neutralColor1;
+  font-size: 1.6rem;
+  a {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
